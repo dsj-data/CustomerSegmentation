@@ -55,7 +55,6 @@
 --------------------------
 ## Business Impact
 - New segmentation enables **targeted marketing strategies** per cluster.  
-- Example: Offering premium memberships to Cluster A yielded simulated **+12% ROI improvement**.  
 - At-risk clusters (B, D) can be reactivated through personalized offers.
 
 --------------------------
