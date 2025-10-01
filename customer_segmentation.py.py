@@ -11,6 +11,7 @@ import seaborn as sns
 
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
+from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.cluster import KMeans
@@ -68,8 +69,21 @@ clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 
-print("Accuracy:", accuracy_score(y_test, y_pred))
+xgb = XGBClassifier(
+    objective="multi:softmax",
+    num_class=4,
+    eval_metric="mlogloss",
+    random_state=42,
+    use_label_encoder=False
+)
+xgb.fit(X_train, y_train)
+y_pred_xgb = xgb.predict(X_test)
+
+print("RF Accuracy:", accuracy_score(y_test, y_pred))
 print(classification_report(y_test, y_pred))
+print("----")
+print("XGB Accuracy:", accuracy_score(y_test, y_pred_xgb))
+print(classification_report(y_test, y_pred_xgb))
 
 # ==========================================
 # 6. K-Means Clustering
