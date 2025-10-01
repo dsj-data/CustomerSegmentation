@@ -55,6 +55,8 @@
 --------------------------
 ## Business Impact
 - New segmentation enables **targeted marketing strategies** per cluster.  
+- More precise customer groups reduce overlap and allow personalized campaigns.  
+- Example: Premium service targeting for Cluster C (Lawyers, high spenders), discount offers for Cluster B (Artists, low spenders).  
 - At-risk clusters (B, D) can be reactivated through personalized offers.
 
 --------------------------
@@ -64,6 +66,8 @@
 
 --------------------------
 ## Next Steps
-- Add customer lifetime value (CLV) features for more robust segmentation  
-- Deploy clustering model in CRM system for real-time assignment of new customers  
-- Run live A/B tests on targeted campaigns per segment
+- **Additional Feature Engineering**: Enrich dataset with new behavioral/transactional features  
+- **Real-time Scoring**: Build an API service that assigns new customers into clusters in real time  
+- **Business Applications**:  
+  - Use K-Means clusters to drive personalized recommendation systems  
+  - Improve customer segmentation for retention campaigns and VIP customer management
