@@ -3,7 +3,7 @@
 ## Overview
 - This project improves upon an existing customer segmentation (A/B/C/D) by applying machine learning–based clustering.  
 - The original segmentation lacked clear differences between groups, especially within overlapping professions (e.g., "Artist" appearing in multiple segments).  
-- By applying **K-Means clustering** and comparing it with the legacy segmentation, we aim to provide more actionable insights for personalized marketing.
+- By applying **K-Means clustering** and comparing it with the existing segmentation, we aim to provide more actionable insights for personalized marketing.
 
 --------------------------
 ## Dataset
@@ -15,9 +15,9 @@
 ## Approach
 1. **EDA**: Demographic analysis (age, profession, spending patterns, etc.)  
 2. **Preprocessing**: Label encoding, one-hot encoding, and scaling where needed  
-3. **Classification (baseline)**: Predict legacy segmentation with RandomForest & XGBoost  
+3. **Classification (baseline)**: Predict existing segmentation with RandomForest & XGBoost  
 4. **Clustering**: K-Means with Elbow Method + Silhouette Score  
-5. **Evaluation**: Compare legacy vs new clusters, visualize with PCA 
+5. **Evaluation**: Compare existing vs new clusters, visualize with PCA 
    
 --------------------------
 ## Data Processing Workflow
@@ -45,7 +45,7 @@
 
 --------------------------
 ## Key Insights
-- **Legacy segmentation** was highly overlapping and hard to interpret.  
+- **Existing segmentation** was highly overlapping and hard to interpret.  
 - **K-Means clusters** formed clearer groups:
   - **Cluster A**: 50s, Artists, high spending → Premium cultural offers  
   - **Cluster B**: 30s, Artists, low spending → Discount/promotion sensitive  
