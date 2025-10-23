@@ -120,10 +120,10 @@ plt.title("K-Means Clusters (PCA Projection)")
 plt.show()
 
 # ==========================================
-# 8. Compare with Legacy Segmentation
+# 8. Compare with Existing Segmentation
 # ==========================================
 cross = pd.crosstab(df["Segmentation"], df["KMeans_Cluster"], normalize="index")
 cross.plot(kind="bar", stacked=True, figsize=(10, 6), colormap="Paired")
-plt.title("Comparison: Legacy Segments vs K-Means Clusters")
+plt.title("Comparison: Existing Segments vs K-Means Clusters")
 plt.show()
 
